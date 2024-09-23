@@ -118,19 +118,19 @@ geom_base() %>%
 #### Gráfica ####
 
 #### Guardado de gráfica ####
-# ggsave(
-#   filename = "curriculum.png",
-#   width = 210,
-#   height = 297,
-#   units = "mm",
-#   bg = "white"
-# )
-
 ggsave(
-  filename = "../../../media/sf_Maquina/curriculum.png",
+  filename = "curriculum.png",
   width = 210,
   height = 297,
   units = "mm",
   bg = "white"
 )
+
+# ggsave(
+#   filename = "../../../media/sf_Maquina/curriculum.png",
+#   width = 210,
+#   height = 297,
+#   units = "mm",
+#   bg = "white"
+# )
 #### Guardado de gráfica ####
