@@ -1,4 +1,5 @@
-# Esta función es la que confecciona el área destinada al nombre.
+# Esta función es la que confecciona el área destinada al tecero ndo de los
+  # puntos fuertes. Además de la propia virtud, muestra una pequeña descripción.
 # Última modificación: 12 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:

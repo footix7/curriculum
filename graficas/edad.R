@@ -1,4 +1,6 @@
-# Esta función es la que confecciona el área destinada al nombre.
+# Esta función es la que confecciona el área destinada a la fecha de nacimiento.
+  # La propia fecha está acompañada de una elemento gráfico que simula el
+  # calendario del mes concreto.
 # Última modificación: 12 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:

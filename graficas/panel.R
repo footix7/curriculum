@@ -1,4 +1,6 @@
-# Esta función es la que confecciona el área destinada al nombre.
+# Esta función es la que confecciona el área más pequeña que ocupa el sector
+  # derecho del currículum. Sobre ella aparece la información más personal como
+  # la imagen, el contacto o las aficiones.
 # Última modificación: 12 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:

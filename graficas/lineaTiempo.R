@@ -1,5 +1,7 @@
-# Esta función es la que confecciona el área destinada al nombre.
-# Última modificación: 12 de septiembre de 2024
+# Esta función es la que confecciona el área destinada a la linea del tiempo que
+  # muestra de una manera más visual tanto el historial académico como el
+  # laboral.
+# Última modificación: 30 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -28,7 +30,7 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
     x = seq(from = 0.075 + (17/120/2), to = 0.925 - (17/120/2), by = 17/120),
     xend = seq(from = 0.075 + (17/120/2), to = 0.925 - (17/120/2), by = 17/120),
     y = 0.05,
-    yend = 1
+    yend = 0.9
   )
   
   dataGrafica$divisorias$x <- (dataGrafica$divisorias$x * (x[2] - x[1])) + x[1]
@@ -46,8 +48,8 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       0.075, 0.075+(17/120)*6.05, 0.075+(17/120)*4, 0.075+(17/120)*3.47,
       0.075+(17/120)*6.05
     ),
-    y = c(1-0.16, 1-(0.16*2), 1-(0.16*3), 1-(0.16*4), 1-(0.16*5)),
-    yend = c(1-0.16, 1-(0.16*2), 1-(0.16*3), 1-(0.16*4), 1-(0.16*5))
+    y = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5)),
+    yend = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5))
   )
   
   dataGrafica$lineas$x <- (dataGrafica$lineas$x * (x[2] - x[1])) + x[1]
@@ -59,7 +61,7 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   ##### Texto #####
   dataGrafica$texto <- data.frame(
     x = c(0.03, 0.03, 0.075, 0.075+(17/120)*3, 0.075+(17/120)*3.53),
-    yend = c(1-0.16, 1-(0.16*2), 1-(0.16*3), 1-(0.16*4), 1-(0.16*5)),
+    yend = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5)),
     label = c(
       "Bachillerato Científico", "Clases particulares",
       "Grado en Ciencia de Datos", "Becario en Mercados",
@@ -128,7 +130,7 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       ),
       family = "tipografia",
       col = colores$secundario,
-      size = 12,
+      size = 10,
       vjust = -0.5,
       hjust = -0.025
     )

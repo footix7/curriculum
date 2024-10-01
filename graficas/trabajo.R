@@ -1,5 +1,5 @@
-# Esta función es la que confecciona el área destinada al nombre.
-# Última modificación: 12 de septiembre de 2024
+# Esta función es la que confecciona el área destinada al historial laboral.
+# Última modificación: 23 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.

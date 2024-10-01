@@ -1,5 +1,5 @@
-# Esta función es la que confecciona el área destinada al historial de estudios.
-# Última modificación: 12 de septiembre de 2024
+# Esta función es la que confecciona el área destinada al historial académico
+# Última modificación: 23 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -59,7 +59,6 @@ graficas$estudios <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   dataGrafica$poligonos$x <- (dataGrafica$poligonos$x * (x[2] - x[1])) + x[1]
   dataGrafica$poligonos$y <- (dataGrafica$poligonos$y * (y[2] - y[1])) + y[1]
   ##### Polígonos #####
-  
   #### Adecuación de datos ####
   
   #### Gráfica ####

@@ -1,4 +1,5 @@
-# Esta función es la que confecciona el área destinada al nombre.
+# Esta función es la que confecciona el área más grande que ocupa el sector
+  # izquierdo del documento.
 # Última modificación: 12 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:

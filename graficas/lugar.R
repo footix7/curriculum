@@ -1,5 +1,9 @@
-# Esta función es la que confecciona el área destinada al nombre.
-# Última modificación: 12 de septiembre de 2024
+# Esta función es la que confecciona el área destinada al lugar de nacimiento y
+  # el lugar de residencia. La información básica, también se muestra sombre un
+  # mapa que contiene algunos de los lugares más icónicos de la ciudad de
+  # Valencia -El Miguelete, La Ciudad de las Artes y las Ciencias, el puerto, 
+  # ambos cauces del rio, etc.
+# Última modificación: 23 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -14,7 +18,7 @@ graficas$lugar <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   dataGrafica <- list()
   ##### Texto #####
   dataGrafica$texto <- data.frame(
-    x = c(0.15, 0.35 + 0.005, 0.35, 0.645, 0.17, 0.43),
+    x = c(0.21, 0.41 + 0.005, 0.41, 0.70, 0.23, 0.49),
     y = c(1, 1 - 0.005, 1, 1, 0.9, 0.9),
     label = c(
       "Soy de", "Burjassot", "Burjassot", "pero", "resido en", "Benicalap"
@@ -43,8 +47,8 @@ graficas$lugar <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       x = c(0.08, 0.74, 0.725, 0.72, 0.72, 0.725, 0.7325, 0.75, 0.08),
       y = c(0, 0, 0.2, 0.3, 0.35, 0.4, 0.5, 0.75, 0.75),
       group = "01tierra",
-      fill = colores$principal,
-      alpha = 0.2
+      fill = "#FBE7CC",
+      alpha = 1
     ),
     data.frame(
       x = c(0.74, 0.725, 0.72, 0.72, 0.725, 0.7325, 0.75, 0.9, 0.9),
@@ -140,6 +144,14 @@ graficas$lugar <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
     geom_sombrilla(
       x = (0.65 + c(0, 0.08)) * (x[2] - x[1]) + x[1],
       y = (0.5625 + c(0, 0.1)) * (y[2] - y[1]) + y[1]
+    ) %>%
+    geom_arts(
+      x = (0.54 + c(0, 0.175)) * (x[2] - x[1]) + x[1],
+      y = (0.15 + c(0, 0.175)) * (y[2] - y[1]) + y[1]
+    ) %>%
+    geom_micalet(
+      x = (0.34 + c(0, 0.175)) * (x[2] - x[1]) + x[1],
+      y = (0.26 + c(0, 0.25)) * (y[2] - y[1]) + y[1]
     )
   #### Gráfica ####
   

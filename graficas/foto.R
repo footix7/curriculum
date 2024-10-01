@@ -1,4 +1,4 @@
-# Esta función es la que confecciona el área destinada al nombre.
+# Esta función es la que confecciona el área destinada a la foto.
 # Última modificación: 12 de septiembre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
@@ -57,7 +57,7 @@ graficas$foto <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
 
   grafica <- grafica +
     annotation_custom(
-      grob = rasterGrob(image = readPNG(source = "./foto/modificada.png")),
+      grob = rasterGrob(image = readPNG(source = "./imagenes/modificada.png")),
       xmin = dataGrafica$imagen$xmin,
       xmax = dataGrafica$imagen$xmax,
       ymin = dataGrafica$imagen$ymin,
