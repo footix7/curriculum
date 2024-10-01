@@ -1,7 +1,7 @@
 # Este script obtiene una imagen de tamaño A4. La imagen contiene un currículum
   # elaborado gracias a la unión de varias gráficas, programadas en R con un uso
   # mayoritario de la librería ggplot.
-# Última modificación: 23 de septiembre de 2024
+# Última modificación: 1 de octubre de 2024
 # Autor: Valero Vilar, Ignacio
 # Requiere:
 # Obtiene: Un archivo .png
@@ -75,6 +75,22 @@ geom_base() %>%
     x = c(0.7, 1),
     y = c(0.75, 1)
   ) %>%
+  graficas$contacto(
+    x = c(0.7, 1),
+    y = c(0.67, 0.75)
+  ) %>%
+  graficas$habilidades(
+    x = c(0.7, 1),
+    y = c(0.55, 0.67)
+  ) %>%
+  graficas$aficiones(
+    x = c(0.7, 1),
+    y = c(0.2, 0.55)
+  ) %>%
+  graficas$acceso(
+    x = c(0.7, 1),
+    y = c(0, 0.2)
+  ) %>%
   graficas$edad(
     x = c(0, 0.35),
     y = c(0.7, 0.9)
@@ -83,19 +99,19 @@ geom_base() %>%
     x = c(0.35, 0.7),
     y = c(0.7, 0.9)
   ) %>%
+  graficas$lineaTiempo(
+    x = c(0, 0.7),
+    y = c(0.55, 0.7)
+  ) %>%
   graficas$estudios(
     x = c(0, 0.35),
-    y = c(0.55, 0.7)
+    y = c(0.375, 0.55)
   ) %>%
   graficas$trabajo(
     x = c(0.35, 0.7),
-    y = c(0.55, 0.7)
-  ) %>%
-  graficas$lineaTiempo(
-    x = c(0, 0.7),
     y = c(0.375, 0.55)
   ) %>%
-  graficas$aficiones(
+  graficas$informacion(
     x = c(0, 0.7),
     y = c(0.2, 0.375)
   ) %>%
@@ -110,10 +126,6 @@ geom_base() %>%
   graficas$hablarPublico(
     x = c(14/30, 0.7),
     y = c(0, 0.2)
-  ) %>%
-  graficas$mensaje(
-    x = c(0.7, 1),
-    y = c(0, 0.125)
   )
 #### Gráfica ####
 
@@ -125,12 +137,4 @@ ggsave(
   units = "mm",
   bg = "white"
 )
-
-# ggsave(
-#   filename = "../../../media/sf_Maquina/curriculum.png",
-#   width = 210,
-#   height = 297,
-#   units = "mm",
-#   bg = "white"
-# )
 #### Guardado de gráfica ####
