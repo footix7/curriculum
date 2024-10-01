@@ -2,7 +2,7 @@
   # permite elaborar este currículum. Se trata de un enlace a github.com que es
   # accesible tanto a través de la lectura de un código QR como del propio
   # enlace web.
-# Última modificación: 30 de septiembre de 2024
+# Última modificación: 1 de octubre de 2024
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -32,7 +32,7 @@ graficas$acceso <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   ##### Imagen #####
   dataGrafica$imagen <- data.frame(
     xmin = 0, xmax = 1, 
-    ymin = 0.25, ymax = 0.85
+    ymin = 0.3, ymax = 0.85
   )
   
   dataGrafica$imagen$xmin <- (dataGrafica$imagen$xmin * (x[2] - x[1])) + x[1]
@@ -46,7 +46,8 @@ graficas$acceso <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
     x = 0.5,
     y = 0.075,
     label = paste0(
-      "Todo programado en R.\ngithub.com/footix7/curriculum" 
+      "Para ver el código que permite\ngenerar este currículum acceder a:\ngit",
+      "hub.com/footix7/curriculum" 
     )
   )
   
@@ -80,7 +81,7 @@ graficas$acceso <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
         label = label
       ),
       vjust = 0,
-      size = 12,
+      size = 10,
       family = "tipografia",
       col = colores$secundario,
       lineheight = 1/3
