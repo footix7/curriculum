@@ -46,8 +46,8 @@ graficas$acceso <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
     x = 0.5,
     y = 0.075,
     label = paste0(
-      "Para ver el código que permite\ngenerar este currículum acceder a:\ngit",
-      "hub.com/footix7/curriculum" 
+      "Para ver el código que permite\ngenerar este currículum acceder a\ngith",
+      "ub.com/footix7/curriculum" 
     )
   )
   
