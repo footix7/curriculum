@@ -1,7 +1,7 @@
 # Esta función es la que confecciona el área destinada a la linea del tiempo que
   # muestra de una manera más visual tanto el historial académico como el
   # laboral.
-# Última modificación: 30 de septiembre de 2024
+# Última modificación: 14 de marzo de 2025
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -16,9 +16,9 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   dataGrafica <- list()
   ##### Años #####
   dataGrafica$años <- data.frame(
-    x = seq(from = 0.075, to = 0.925, length.out = 2024-2018+1),
+    x = seq(from = 0.075, to = 0.925, length.out = 2025-2018+1),
     y = 0,
-    label = 2018:2024
+    label = 2018:2025
   )
   
   dataGrafica$años$x <- (dataGrafica$años$x * (x[2] - x[1])) + x[1]
@@ -27,8 +27,8 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   
   ##### Divisorias #####
   dataGrafica$divisorias <- data.frame(
-    x = seq(from = 0.075 + (17/120/2), to = 0.925 - (17/120/2), by = 17/120),
-    xend = seq(from = 0.075 + (17/120/2), to = 0.925 - (17/120/2), by = 17/120),
+    x = seq(from = 0.075 + (17/140/2), to = 0.925 - (17/140/2), by = 17/140),
+    xend = seq(from = 0.075 + (17/140/2), to = 0.925 - (17/140/2), by = 17/140),
     y = 0.05,
     yend = 0.9
   )
@@ -43,10 +43,10 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   
   ##### Líneas #####
   dataGrafica$lineas <- data.frame(
-    x = c(0.01, 0.01, 0.075, 0.075+(17/120)*3, 0.075+(17/120)*3.53),
+    x = c(0.01, 0.01, 0.075, 0.075+(17/140)*3, 0.075+(17/140)*3.53),
     xend = c(
-      0.075, 0.075+(17/120)*6.05, 0.075+(17/120)*4, 0.075+(17/120)*3.47,
-      0.075+(17/120)*6.05
+      0.075, 0.075+(17/140)*6.8, 0.075+(17/140)*4, 0.075+(17/140)*3.47,
+      0.075+(17/140)*6.8
     ),
     y = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5)),
     yend = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5))
@@ -60,12 +60,12 @@ graficas$lineaTiempo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   
   ##### Texto #####
   dataGrafica$texto <- data.frame(
-    x = c(0.03, 0.03, 0.075, 0.075+(17/120)*3, 0.075+(17/120)*3.53),
-    yend = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5)),
+    x = c(0.03, 0.03, 0.075, 0.075+(17/140)*3, 0.075+(17/140)*3.53),
+    y = c(0.9-0.14, 0.9-(0.14*2), 0.9-(0.14*3), 0.9-(0.14*4), 0.9-(0.14*5)),
     label = c(
       "Bachillerato Científico", "Clases particulares",
-      "Grado en Ciencia de Datos", "Becario en Mercados",
-      "Técnico en Fidelización"
+      "Grado en Ciencia de Datos", "Analista de Mercados",
+      "Fidelización del Cliente"
     )
   )
   
