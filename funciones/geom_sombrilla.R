@@ -19,19 +19,19 @@ geom_sombrilla <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       x = c(0, 0.6, 0.75),
       y = c(1, 0.7, 1),
       group = "02tela01",
-      fill = "#C67400"
+      fill = colores$detalles
     ),
     data.frame(
       x = c(0, 0.6, 0.3),
       y = c(1, 0.7, 0.4),
       group = "02tela02",
-      fill = "#ED8B00"
+      fill = colores$principal
     ),
     data.frame(
       x = c(0, 0, 0.3),
       y = c(1, 0.25, 0.4),
       group = "02tela03",
-      fill = "#C67400"
+      fill = colores$detalles
     ),
     data.frame(
       x = c(0.925,     1, 0.075,    0),
