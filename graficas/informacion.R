@@ -1,6 +1,6 @@
 # Esta función es la que confecciona el área destinada a resumir en qué ha
   # consistido mi trabajo en los últimos dos años.
-# Última modificación: 1 de octubre de 2024
+# Última modificación: 14 de marzo de 2025
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -43,7 +43,7 @@ graficas$informacion <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       ),
       paste0(
         "He creado paquetes de funciones en R\npara agilizar el análisis de da",
-        "tos que se\nhace particularmente en Consum."
+        "tos que se\nhace particularmente en la empresa."
       ),
       paste0(
         "He impartido un curso de SQL\npara dotar a mis compañeras\nde auto",

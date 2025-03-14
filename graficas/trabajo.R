@@ -1,5 +1,5 @@
 # Esta función es la que confecciona el área destinada al historial laboral.
-# Última modificación: 23 de septiembre de 2024
+# Última modificación: 14 de marzo de 2025
 # Autor: Valero Vilar, Ignacio
 # Argumentos:
   # grafica (ggplot): Objeto sobre el cual la función va añadir capas.
@@ -14,11 +14,11 @@ graficas$trabajo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   dataGrafica <- list()
   ##### Texto #####
   dataGrafica$texto <- data.frame(
-    x = c(0.05, 0.555, 0.07, 0.05, 0.61, 0.07),
+    x = c(0.05, 0.585, 0.07, 0.05, 0.61, 0.07),
     y = c(0.65, 0.65, 0.55, 0.35, 0.35, 0.25),
     label = c(
-      "Becario en Mercados", "en el", "departamiento de SCyMk (2021)",
-      "Técnico en Fidelización", "en el", "departamento de SCyMk (2022 - )"
+      "Analista de Mercados", "en", "Supermercados Consum (2021)",
+      "Fidelización del cliente", "en", "Supermercados Consum (2022 - 25)"
     ),
     col = c(
       colores$detalles, colores$secundario,colores$secundario,
@@ -36,14 +36,14 @@ graficas$trabajo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
   ##### Polígonos #####
   dataGrafica$poligonos <- rbind(
     data.frame(
-      x = c(0.04, 0.55, 0.55, 0.04),
+      x = c(0.04, 0.57, 0.57, 0.04),
       y = c(0.595, 0.595, 0.705, 0.705),
-      group = "becario"
+      group = "mercados"
     ),
     data.frame(
-      x = c(0.04, 0.6, 0.6, 0.04),
+      x = c(0.04, 0.595, 0.595, 0.04),
       y = c(0.295, 0.295, 0.405, 0.405),
-      group = "tecnico"
+      group = "fidelizacion"
     )
   )
   
