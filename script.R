@@ -40,9 +40,9 @@ for (fichero in ficheros){
 graficas <- list()
 
 colores <- list(
-  principal = "#ED8B00",
+  principal = "#6ec3ff",
   secundario = "#323232",
-  detalles = "#A25E2A"
+  detalles = "#005EA1"
 )
 
 cargaTipografia(tipografia = "Nunito")
@@ -131,10 +131,10 @@ geom_base() %>%
 
 #### Guardado de gráfica ####
 ggsave(
-  filename = "curriculum.png",
-  width = 210,
-  height = 297,
-  units = "mm",
-  bg = "white"
+ filename = "curriculum.png",
+ width = 210,
+ height = 297,
+ units = "mm",
+ bg = "white"
 )
 #### Guardado de gráfica ####
