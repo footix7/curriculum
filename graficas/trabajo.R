@@ -18,7 +18,7 @@ graficas$trabajo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
     y = c(0.65, 0.65, 0.55, 0.35, 0.35, 0.25),
     label = c(
       "Analista de Mercados", "en", "Supermercados Consum (2021)",
-      "Fidelización del cliente", "en", "Supermercados Consum (2022 - 25)"
+      "Fidelización del Cliente", "en", "Supermercados Consum (2022 - 25)"
     ),
     col = c(
       colores$detalles, colores$secundario,colores$secundario,
@@ -41,7 +41,7 @@ graficas$trabajo <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
       group = "mercados"
     ),
     data.frame(
-      x = c(0.04, 0.595, 0.595, 0.04),
+      x = c(0.04, 0.605, 0.605, 0.04),
       y = c(0.295, 0.295, 0.405, 0.405),
       group = "fidelizacion"
     )
