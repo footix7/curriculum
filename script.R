@@ -9,7 +9,7 @@
 
 #### Carga de librerias ####
 librerias <- c(
-  "ggplot2", "magrittr", "ggfx", "sysfonts", "showtext", "png", "grid"
+  "ggplot2", "magrittr", "ggfx", "sysfonts", "showtext", "png", "grid", "dplyr"
 )
 instalados <- .packages(all.available = TRUE)
 
