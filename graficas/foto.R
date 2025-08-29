@@ -57,7 +57,7 @@ graficas$foto <- function(grafica = ggplot(), x = c(0, 1), y = c(0, 1)){
 
   grafica <- grafica +
     annotation_custom(
-      grob = rasterGrob(image = readPNG(source = "./imagenes/modificada.png")),
+      grob = rasterGrob(image = readPNG(source = "./imagenes/foto.png")),
       xmin = dataGrafica$imagen$xmin,
       xmax = dataGrafica$imagen$xmax,
       ymin = dataGrafica$imagen$ymin,
